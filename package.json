@@ -8,27 +8,30 @@
   "dependencies": {
     "@sap/cds": "^7",
     "express": "^4",
-    "@sap/cds-hana": "^2"
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "passport": "^0"
   },
   "scripts": {
     "start": "cds-serve"
   },
   "cds": {
     "build": {
-        "tasks": [
-            {
-                "for": "hana",
-                "dest": "../db"
-            },
-            {
-                "for": "node-cf"
-            }
-        ]
+      "tasks": [
+        {
+          "for": "hana",
+          "dest": "../db"
+        },
+        {
+          "for": "node-cf"
+        }
+      ]
     },
     "requires": {
-        "db": {
-            "kind": "hana-cloud"
-        }
+      "db": {
+        "kind": "hana-cloud"
+      },
+      "auth": "xsuaa"
     }
-}
+  }
 }
