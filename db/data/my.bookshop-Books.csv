@@ -1,3 +1,8 @@
-ID;title;stock
-1;Wuthering Heights;100
-2;Jane Eyre;500
+ID;title;author;stock
+1;Wuthering Heights;Emily Brontë;100
+2;Jane Eyre;Jane Eyre;500
+3;Blood Meridian;Cormac McCarthy;350
+4;Factotum;Charles Bukowsky;110
+5;Pet Semetary;Stephen King;200
+6;The Catcher in the Rye;J.D. Salinger;90
+7;The Lady in the Lake;Raymond Chandler;434
