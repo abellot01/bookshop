@@ -4,4 +4,7 @@ using my.bookshop as my from '../db/data-model';
 service CatalogService {
     @requires: 'Admin'
     entity Books as projection on my.Books;
+
+    //@requires: 'Admin'
+    entity Genres as projection on my.Genres;
 }
