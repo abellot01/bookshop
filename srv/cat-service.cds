@@ -8,4 +8,7 @@ service CatalogService {
 
     @requires: 'Admin'
     entity Genres as projection on my.Genres;
+
+    @requires: 'Admin'
+    function sleep() returns Boolean;
 }
