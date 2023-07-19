@@ -1,0 +1,17 @@
+{
+  "role": {
+    "name": "PublicAccessSchema",
+    "schema_privileges": [
+      {
+        "privileges": [
+          "EXECUTE",
+          "SELECT",
+          "ALTER",
+          "DELETE",
+          "INSERT",
+          "UPDATE"
+        ]
+      }
+    ]
+  }
+}
