@@ -1,0 +1,1619 @@
+{
+	"info": {
+		"_postman_id": "e12ac6e2-2a2d-483c-bf42-ddf2414e2ee3",
+		"name": "Service for namespace CatalogService",
+		"description": "This service is located at [/catalog/](/catalog/)\n\n## Entity Data Model\n![ER Diagram](https://yuml.me/diagram/class/[Books{bg:lightslategray}],[Genres{bg:lightslategray}],[sleep{bg:lawngreen}],[Genres%20{bg:lawngreen}]++-*>[Genres],[Books%20{bg:lawngreen}]++-*>[Books])\n\n### Legend\n![Legend](https://yuml.me/diagram/plain;dir:TB;scale:60/class/[External.Type{bg:whitesmoke}],[ComplexType],[EntityType{bg:lightslategray}],[EntitySet/Singleton/Operation{bg:lawngreen}])",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27936243"
+	},
+	"item": [
+		{
+			"name": "sleep()",
+			"item": [
+				{
+					"name": "Invoke function sleep",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/sleep()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sleep()"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sleep()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sleep()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "<boolean>"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sleep()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sleep()"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Genres({ID})",
+			"item": [
+				{
+					"name": "Retrieve a single genre.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Genres({{ID}})?$select=name,ID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Genres({{ID}})"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "name,ID",
+									"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieved genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Genres({{ID}})?$select=name,ID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres({{ID}})"
+									],
+									"query": [
+										{
+											"key": "$select",
+											"value": "name,ID",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"ID\": \"<integer>\",\n  \"name\": \"<string>\"\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Genres({{ID}})?$select=name,ID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres({{ID}})"
+									],
+									"query": [
+										{
+											"key": "$select",
+											"value": "name,ID",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change a single genre.",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Genres({{ID}})",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Genres({{ID}})"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Genres({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres({{ID}})"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Genres({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres({{ID}})"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a single genre.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Genres({{ID}})",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Genres({{ID}})"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Genres({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres({{ID}})"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Genres({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres({{ID}})"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Genres",
+			"item": [
+				{
+					"name": "Retrieve a list of genres.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Genres?$top=<integer>&$skip=<integer>&$search=<string>&$filter=<string>&$count=<boolean>&$orderby=ID desc,name desc&$select=name,ID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Genres"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "<integer>",
+									"description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)"
+								},
+								{
+									"key": "$skip",
+									"value": "<integer>",
+									"description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)"
+								},
+								{
+									"key": "$search",
+									"value": "<string>",
+									"description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)"
+								},
+								{
+									"key": "$filter",
+									"value": "<string>",
+									"description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+								},
+								{
+									"key": "$count",
+									"value": "<boolean>",
+									"description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)"
+								},
+								{
+									"key": "$orderby",
+									"value": "ID desc,name desc",
+									"description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)"
+								},
+								{
+									"key": "$select",
+									"value": "name,ID",
+									"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieved genres",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Genres?$top=<integer>&$skip=<integer>&$search=<string>&$filter=<string>&$count=<boolean>&$orderby=ID desc,name desc&$select=name,ID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "<integer>",
+											"description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)"
+										},
+										{
+											"key": "$skip",
+											"value": "<integer>",
+											"description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)"
+										},
+										{
+											"key": "$search",
+											"value": "<string>",
+											"description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)"
+										},
+										{
+											"key": "$filter",
+											"value": "<string>",
+											"description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+										},
+										{
+											"key": "$count",
+											"value": "<boolean>",
+											"description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)"
+										},
+										{
+											"key": "$orderby",
+											"value": "ID desc,name desc",
+											"description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)"
+										},
+										{
+											"key": "$select",
+											"value": "name,ID",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"@odata.count\": \"<number>\",\n  \"value\": [\n    {\n      \"ID\": \"<integer>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Genres?$top=<integer>&$skip=<integer>&$search=<string>&$filter=<string>&$count=<boolean>&$orderby=ID desc,name desc&$select=name,ID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "<integer>",
+											"description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)"
+										},
+										{
+											"key": "$skip",
+											"value": "<integer>",
+											"description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)"
+										},
+										{
+											"key": "$search",
+											"value": "<string>",
+											"description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)"
+										},
+										{
+											"key": "$filter",
+											"value": "<string>",
+											"description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+										},
+										{
+											"key": "$count",
+											"value": "<boolean>",
+											"description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)"
+										},
+										{
+											"key": "$orderby",
+											"value": "ID desc,name desc",
+											"description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)"
+										},
+										{
+											"key": "$select",
+											"value": "name,ID",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a single genre.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Genres",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Genres"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created genre",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Genres",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"ID\": \"<integer>\",\n  \"name\": \"<string>\"\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Genres",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Genres"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books({ID})",
+			"item": [
+				{
+					"name": "Retrieve a single book.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Books({{ID}})?$select=ID,stock",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Books({{ID}})"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "ID,stock",
+									"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieved book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Books({{ID}})?$select=ID,stock",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books({{ID}})"
+									],
+									"query": [
+										{
+											"key": "$select",
+											"value": "ID,stock",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"ID\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Books({{ID}})?$select=ID,stock",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books({{ID}})"
+									],
+									"query": [
+										{
+											"key": "$select",
+											"value": "ID,stock",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change a single book.",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Books({{ID}})",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Books({{ID}})"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Books({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books({{ID}})"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Books({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books({{ID}})"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a single book.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Books({{ID}})",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Books({{ID}})"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Books({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books({{ID}})"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Books({{ID}})",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books({{ID}})"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Retrieve a list of books.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Books?$top=<integer>&$skip=<integer>&$search=<string>&$filter=<string>&$count=<boolean>&$orderby=stock,title&$select=ID,stock",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Books"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "<integer>",
+									"description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)"
+								},
+								{
+									"key": "$skip",
+									"value": "<integer>",
+									"description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)"
+								},
+								{
+									"key": "$search",
+									"value": "<string>",
+									"description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)"
+								},
+								{
+									"key": "$filter",
+									"value": "<string>",
+									"description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+								},
+								{
+									"key": "$count",
+									"value": "<boolean>",
+									"description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)"
+								},
+								{
+									"key": "$orderby",
+									"value": "stock,title",
+									"description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)"
+								},
+								{
+									"key": "$select",
+									"value": "ID,stock",
+									"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieved books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Books?$top=<integer>&$skip=<integer>&$search=<string>&$filter=<string>&$count=<boolean>&$orderby=stock,title&$select=ID,stock",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "<integer>",
+											"description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)"
+										},
+										{
+											"key": "$skip",
+											"value": "<integer>",
+											"description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)"
+										},
+										{
+											"key": "$search",
+											"value": "<string>",
+											"description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)"
+										},
+										{
+											"key": "$filter",
+											"value": "<string>",
+											"description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+										},
+										{
+											"key": "$count",
+											"value": "<boolean>",
+											"description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)"
+										},
+										{
+											"key": "$orderby",
+											"value": "stock,title",
+											"description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)"
+										},
+										{
+											"key": "$select",
+											"value": "ID,stock",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"@odata.count\": \"<number>\",\n  \"value\": [\n    {\n      \"ID\": \"<integer>\",\n      \"title\": \"<string>\",\n      \"author\": \"<string>\",\n      \"stock\": \"<integer>\"\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"title\": \"<string>\",\n      \"author\": \"<string>\",\n      \"stock\": \"<integer>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Books?$top=<integer>&$skip=<integer>&$search=<string>&$filter=<string>&$count=<boolean>&$orderby=stock,title&$select=ID,stock",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "<integer>",
+											"description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)"
+										},
+										{
+											"key": "$skip",
+											"value": "<integer>",
+											"description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)"
+										},
+										{
+											"key": "$search",
+											"value": "<string>",
+											"description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)"
+										},
+										{
+											"key": "$filter",
+											"value": "<string>",
+											"description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+										},
+										{
+											"key": "$count",
+											"value": "<boolean>",
+											"description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)"
+										},
+										{
+											"key": "$orderby",
+											"value": "stock,title",
+											"description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)"
+										},
+										{
+											"key": "$select",
+											"value": "ID,stock",
+											"description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a single book.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Books",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Books",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"ID\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"stock\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Books",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Books"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "$batch",
+			"item": [
+				{
+					"name": "Send a group of requests",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/mixed;boundary=request-separator"
+							},
+							{
+								"key": "Accept",
+								"value": "multipart/mixed"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<string>"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/$batch",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"$batch"
+							]
+						},
+						"description": "Group multiple requests into a single request payload, see [Batch Requests](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_BatchRequests).\n\n*Please note that \"Try it out\" is not supported for this request.*"
+					},
+					"response": [
+						{
+							"name": "Batch response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/mixed;boundary=request-separator"
+									},
+									{
+										"key": "Accept",
+										"value": "multipart/mixed"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<string>"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/$batch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"$batch"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "multipart/mixed"
+								}
+							],
+							"cookie": [],
+							"body": "<string>"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/mixed;boundary=request-separator"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<string>"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/$batch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"$batch"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\",\n    \"details\": [\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"message\": \"<string>\",\n        \"target\": \"<string>\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authorization Prod004 Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "sb-mmcp-connector!t151207",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "wwEusB7J+gMYSivqOhg3tvjRl8c=",
+							"type": "text"
+						},
+						{
+							"key": "response_type",
+							"value": "token",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "xsappname",
+							"value": "mmcp-connector",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sap-learning-prod.authentication.eu10.hana.ondemand.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"sap-learning-prod",
+						"authentication",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vN2QwNTgyOTF0cmlhbC5hdXRoZW50aWNhdGlvbi51czEwLmhhbmEub25kZW1hbmQuY29tL3Rva2VuX2tleXMiLCJraWQiOiJkZWZhdWx0LWp3dC1rZXktLTI1NTQxMDUyMyIsInR5cCI6IkpXVCIsImppZCI6ICJLYXdWa3FPM045VFFNKzY0MEUzbWpjN2ZKcmNsYUdKRUpzSklUTnNnV3RjPSJ9.eyJqdGkiOiIxNmVhZGM1MTc0N2U0MWE1ODRjODMzMDdmNWE0NTM1YSIsImV4dF9hdHRyIjp7ImVuaGFuY2VyIjoiWFNVQUEiLCJzdWJhY2NvdW50aWQiOiJkNzMxYWQwMC04MzExLTQ5NjgtOTJmZC1hZmYzNDlhODc1MWMiLCJ6ZG4iOiI3ZDA1ODI5MXRyaWFsIn0sInN1YiI6InNiLWJvb2tzaG9wLTdkMDU4MjkxdHJpYWwtZGV2IXQxODExNDIiLCJhdXRob3JpdGllcyI6WyJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsidWFhLnJlc291cmNlIl0sImNsaWVudF9pZCI6InNiLWJvb2tzaG9wLTdkMDU4MjkxdHJpYWwtZGV2IXQxODExNDIiLCJjaWQiOiJzYi1ib29rc2hvcC03ZDA1ODI5MXRyaWFsLWRldiF0MTgxMTQyIiwiYXpwIjoic2ItYm9va3Nob3AtN2QwNTgyOTF0cmlhbC1kZXYhdDE4MTE0MiIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiZDE2ODRlYTEiLCJpYXQiOjE2ODk5MzU2MTMsImV4cCI6MTY4OTkzOTIxMywiaXNzIjoiaHR0cHM6Ly83ZDA1ODI5MXRyaWFsLmF1dGhlbnRpY2F0aW9uLnVzMTAuaGFuYS5vbmRlbWFuZC5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJkNzMxYWQwMC04MzExLTQ5NjgtOTJmZC1hZmYzNDlhODc1MWMiLCJhdWQiOlsidWFhIiwic2ItYm9va3Nob3AtN2QwNTgyOTF0cmlhbC1kZXYhdDE4MTE0MiJdfQ.PF9klTx-IcqQofEq6ZfVmBUXOaVkmTU9XsiBmtgDaIa-vjrEnkI-0BDDL1WHoI8h04miHwtF3GEKT3eEyydive3SPXOWiYhrvlqpHQzmQRwVb_g2gbGr6F0AC16a70wG1jQ7OpIeVA8Uhfln0lafcSuQjVv_s9vpRCX3_7T-_zvhPigy0FP8j3GsJtU6X-MM8fheA9XParTeMtOqHLJ93eydgexKKi_CLoqOyo-JMTpCAsmMqf2Bbe8qZ_7NvxJXfyrA4TDPFFfctRZSXJleq-uyDVlUc4biqyBOanhpA85_fNPldmQKCsE3whJMF7hiQtrsOZfu7zLAvdwTff6yyg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/catalog"
+		},
+		{
+			"key": "ID",
+			"value": "<integer>"
+		},
+		{
+			"key": "ID",
+			"value": "<integer>"
+		},
+		{
+			"key": "ID",
+			"value": "<integer>"
+		},
+		{
+			"key": "ID",
+			"value": "<integer>"
+		},
+		{
+			"key": "ID",
+			"value": "<integer>"
+		},
+		{
+			"key": "ID",
+			"value": "<integer>"
+		}
+	]
+}

@@ -9,29 +9,53 @@
     "@sap/cds": "^7",
     "@sap/cds-hana": "^2",
     "@sap/xssec": "^3",
+    "cors": "^2.8.5",
     "express": "^4",
     "passport": "^0.6.0"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "to-openapi": "cds compile srv --to openapi -s all -o srv --openapi:diagram"
   },
   "cds": {
-    "build": {
-      "tasks": [
-        {
-          "for": "hana",
-          "dest": "../db"
-        },
-        {
-          "for": "node-cf"
-        }
-      ]
+    "hana": {
+      "deploy-format": "hdbtable"
     },
     "requires": {
-      "db": {
-        "kind": "hana-cloud"
+      "[production]": {
+        "db": {
+          "kind": "hana"
+        },
+        "auth": {
+          "kind": "xsuaa"
+        }
       },
-      "auth": "xsuaa"
+      "[development]": {
+        "db": {
+          "kind": "hana"
+        },
+        "auth": {
+          "strategy": "mock",
+          "users": {
+            "admin": {
+              "password": "1234",
+              "roles": [
+                "Admin"
+              ]
+            },
+            "I348385": {
+              "password": "1234",
+              "roles": [
+                "Admin"
+              ]
+            }
+          }
+        }
+      }
     }
+  },
+  "devDependencies": {
+    "cds-swagger-ui-express": "^0.6.0",
+    "sqlite3": "^5.1.6"
   }
 }
