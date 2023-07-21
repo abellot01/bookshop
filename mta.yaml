@@ -27,7 +27,7 @@ modules:
 
   - name: bookshop-db-deployer
     type: hdb
-    path: db #gen/db
+    path: gen/db
     parameters:
       buildpack: nodejs_buildpack
     requires:
