@@ -11,7 +11,8 @@
     "@sap/xssec": "^3",
     "cors": "^2.8.5",
     "express": "^4",
-    "passport": "^0.6.0"
+    "passport": "^0.6.0",
+    "cds-swagger-ui-express": "^0.6.0"
   },
   "scripts": {
     "start": "cds-serve",
@@ -48,6 +49,12 @@
               "roles": [
                 "Admin"
               ]
+            },
+            "I069787": {
+              "password": "1234",
+              "roles": [
+                "Admin"
+              ]
             }
           }
         }
@@ -55,7 +62,6 @@
     }
   },
   "devDependencies": {
-    "cds-swagger-ui-express": "^0.6.0",
     "sqlite3": "^5.1.6"
   }
 }
