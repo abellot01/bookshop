@@ -6,7 +6,7 @@ service CatalogService {
     //@restrict: [{ grant: 'READ', where: 'STOCK > 200'}]
     entity Books as projection on my.Books;
 
-    @requires: 'Admin'
+    //@requires: 'Admin'
     entity Genres as projection on my.Genres;
 
     //@requires: 'Admin'
