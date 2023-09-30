@@ -55,6 +55,8 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+      config:
+       database_id: 031d3a00-898f-466e-95e7-cf3eb1d0e517
   - name: bookshop-uaa
     type: org.cloudfoundry.managed-service
     parameters:
