@@ -1,0 +1,8 @@
+PROCEDURE "books"( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+    select * from "MY_BOOKSHOP_BOOKS";
+END
