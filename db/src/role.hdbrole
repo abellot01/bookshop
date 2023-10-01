@@ -1,0 +1,16 @@
+{
+  "role": {
+    "name": "role",
+    "schema_privileges": [
+      {
+        "privileges": [
+          "EXECUTE",
+          "DELETE",
+          "SELECT",
+          "UPDATE",
+          "INSERT"
+        ]
+      }
+    ]
+  }
+}
