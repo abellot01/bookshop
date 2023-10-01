@@ -1,0 +1,13 @@
+procedure "insert"()
+language sqlscript
+sql security invoker
+as
+begin
+	declare i int;
+	i = 0;
+	for i in 1..1000000
+	    do	
+		    insert into "MY_BOOKSHOP_T001" values (:i, 'text');
+        end for;
+    truncate table "MY_BOOKSHOP_T001";
+end

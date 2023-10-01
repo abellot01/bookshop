@@ -10,5 +10,14 @@ service CatalogService {
     entity Genres as projection on my.Genres;
 
     //@requires: 'Admin'
+    entity T001 as projection on my.T001;
+
+    //@requires: 'Admin'
     function sleep() returns Boolean;
+
+    //@requires: 'Admin'
+    function books() returns Boolean;
+
+    //@requires: 'Admin'
+    function insert() returns Boolean;
 }

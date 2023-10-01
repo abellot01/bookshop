@@ -10,5 +10,27 @@ module.exports = cds.service.impl(function () {
         console.error(error)
         return false
     }
-    })
+    }),
+    this.on('books', async () => {
+        try {
+            let dbQuery = ' Call "books"( )'
+            let result = await cds.run(dbQuery, { })
+            console.log(result)
+            return true
+        } catch (error) {
+            console.error(error)
+            return false
+        }
+        }),
+    this.on('insert', async () => {
+        try {
+            let dbQuery = ' Call "insert"( )'
+            let result = await cds.run(dbQuery, { })
+            console.log(result)
+            return true
+        } catch (error) {
+            console.error(error)
+            return false
+        }
+        })
 })

@@ -11,3 +11,8 @@ entity Genres {
   key ID : Integer;
   name : String;
 };
+
+entity T001 {
+  ID : Integer;
+  name : String;
+};
