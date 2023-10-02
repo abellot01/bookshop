@@ -21,7 +21,7 @@ module.exports = cds.service.impl(function () {
             console.error(error)
             return false
         }
-        }),
+    }),
     this.on('insert', async () => {
         try {
             let dbQuery = ' Call "insert"( )'
@@ -32,9 +32,9 @@ module.exports = cds.service.impl(function () {
             console.error(error)
             return false
         }
-        }),
-        this.on('newgenre', async (req) => {
-            try {
+    }),
+    this.on('newgenre', async (req) => {
+        try {
                 const { id, name } = req.data;
                 let dbQuery = `Call "newgenre"("ID" => ${id}, "NAME" => '${name}')`;
                 let result = await cds.run(dbQuery, { })
@@ -44,8 +44,8 @@ module.exports = cds.service.impl(function () {
                 console.error(error)
                 return false
             }
-            }),
-        this.on('deletegenre', async (req) => {
+    }),
+    this.on('deletegenre', async (req) => {
                 try {
                     const { id } = req.data;
                     let dbQuery = `Call "deletegenre"("ID" => ${id})`;
@@ -56,5 +56,16 @@ module.exports = cds.service.impl(function () {
                     console.error(error)
                     return false
                 }
-            })
+    }),
+    this.on('truncategenres', async () => {
+        try {
+            let dbQuery = ' Call "truncategenres"( )'
+            let result = await cds.run(dbQuery, { })
+            console.log(result)
+            return true
+        } catch (error) {
+            console.error(error)
+            return false
+        }
+    })
 });
