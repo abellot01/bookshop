@@ -20,4 +20,7 @@ service CatalogService {
 
     //@requires: 'Admin'
     function insert() returns Boolean;
+
+    //@requires: 'Admin'
+    function newgenre(id: Integer, name: String) returns Boolean;
 }
