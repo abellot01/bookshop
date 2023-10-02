@@ -23,4 +23,7 @@ service CatalogService {
 
     //@requires: 'Admin'
     function newgenre(id: Integer, name: String) returns Boolean;
+
+    //@requires: 'Admin'
+    function deletegenre(id: Integer) returns Boolean;
 }

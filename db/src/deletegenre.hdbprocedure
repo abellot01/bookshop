@@ -1,0 +1,7 @@
+PROCEDURE "deletegenre" (IN id INTEGER)
+  LANGUAGE SQLSCRIPT
+  SQL SECURITY INVOKER
+  AS
+BEGIN
+    delete from "MY_BOOKSHOP_GENRES" where id = :id;
+END
