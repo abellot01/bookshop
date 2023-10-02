@@ -26,4 +26,7 @@ service CatalogService {
 
     //@requires: 'Admin'
     function deletegenre(id: Integer) returns Boolean;
+
+    //@requires: 'Admin'
+    function truncategenres() returns Boolean;
 }

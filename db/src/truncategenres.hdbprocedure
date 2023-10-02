@@ -1,0 +1,7 @@
+procedure "truncategenres"()
+language sqlscript
+sql security invoker
+as
+begin
+    truncate table "MY_BOOKSHOP_GENRES";
+end
