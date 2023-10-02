@@ -1,0 +1,7 @@
+PROCEDURE "newgenre" (IN id INTEGER, IN name NVARCHAR(100))
+  LANGUAGE SQLSCRIPT
+  SQL SECURITY INVOKER
+  AS
+BEGIN
+    insert into "MY_BOOKSHOP_GENRES" values (:id, :name);
+END
