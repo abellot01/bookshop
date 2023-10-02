@@ -44,5 +44,17 @@ module.exports = cds.service.impl(function () {
                 console.error(error)
                 return false
             }
+            }),
+        this.on('deletegenre', async (req) => {
+                try {
+                    const { id } = req.data;
+                    let dbQuery = `Call "deletegenre"("ID" => ${id})`;
+                    let result = await cds.run(dbQuery, { })
+                    console.log(result)
+                    return true
+                } catch (error) {
+                    console.error(error)
+                    return false
+                }
             })
 });
