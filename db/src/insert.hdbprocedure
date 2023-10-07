@@ -9,5 +9,5 @@ begin
 	    do	
 		    insert into "MY_BOOKSHOP_T001" values (:i, 'text');
         end for;
-    --truncate table "MY_BOOKSHOP_T001";
+    truncate table "MY_BOOKSHOP_T001";
 end
