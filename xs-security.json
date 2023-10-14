@@ -27,8 +27,8 @@
       "redirect-uris": [
           "https://*.applicationstudio.cloud.sap/**",
           "https://*-space57f4bc1.cfapps.*.hana.ondemand.com/**",
-          "https://*-spac596b5097.cfapps.*.hana.ondemand.com/**"
-
+          "https://*-spac596b5097.cfapps.*.hana.ondemand.com/**",
+          "https://*sap-hana-cloud-hc-dev-demo-3-users-hana-dev-support-bookshop.cfapps.*.hana.ondemand.com/**"
       ]
     }
   }
