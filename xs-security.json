@@ -1,34 +1,34 @@
 {
   "xsappname": "bookshop",
   "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
   "scopes": [
-      {
-          "name": "$XSAPPNAME.Admin",
-          "description": "Admin"
-      }
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    }
   ],
-  "attributes": [],
   "role-templates": [
-      {
-          "name": "Admin",
-          "description": "generated",
-          "scope-references": [
-              "$XSAPPNAME.Admin"
-          ],
-          "attribute-references": []
-      }
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    }
   ],
   "oauth2-configuration": {
     "token-validity": 3600,
-      "credential-types": [
-          "binding-secret",
-          "x509"
-      ],
-      "redirect-uris": [
-          "https://*.applicationstudio.cloud.sap/**",
-          "https://*-space57f4bc1.cfapps.*.hana.ondemand.com/**",
-          "https://*-spac596b5097.cfapps.*.hana.ondemand.com/**",
-          "https://*sap-hana-cloud-hc-dev-demo-3-users-hana-dev-support-bookshop.cfapps.*.hana.ondemand.com/**"
-      ]
-    }
+    "credential-types": [
+      "binding-secret",
+      "x509"
+    ],
+    "redirect-uris": [
+      "https://*.applicationstudio.cloud.sap/**",
+      "https://*-space57f4bc1.cfapps.*.hana.ondemand.com/**",
+      "https://*-spac596b5097.cfapps.*.hana.ondemand.com/**",
+      "https://*sap-hana-cloud-hc-dev-demo-3-users-hana-dev-support-bookshop.cfapps.*.hana.ondemand.com/**",
+      "https://*-boo72f27d6d.cfapps.*.hana.ondemand.com/**"
+    ]
   }
+}
