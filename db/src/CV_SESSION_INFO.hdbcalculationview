@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_SESSION_INFO" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="CV_SESSION_INFO"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="BOOKSHOP_DB_TF_SESSION_INFO" type="TABLE_FUNCTION">
+    <resourceUri>BOOKSHOP_DB_TF_SESSION_INFO</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+
+<logicalModel id="BOOKSHOP_DB_TF_SESSION_INFO">
+  <attributes>
+    <attribute id="ITEM" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEM"/>
+      <keyMapping columnObjectName="BOOKSHOP_DB_TF_SESSION_INFO" columnName="ITEM"/>
+    </attribute>
+    <attribute id="VALUE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALUE"/>
+      <keyMapping columnObjectName="BOOKSHOP_DB_TF_SESSION_INFO" columnName="VALUE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="246"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>
