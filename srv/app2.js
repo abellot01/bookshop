@@ -37,7 +37,7 @@ function myconn(cb) {
 function mysql1(cb) {
     var fields = ['ITEM', 'VALUE'];
     var sql = util.format(
-        'call "BOOKSHOP_HDI_BOOKSHOP_DB_DEPLOYER_1"."insert"');
+        'call "561A24BCCDC84E7D86DFF608AECC1AF5"."insert"');
     console.log("SQL statement: " + sql);
     cb(null, sql);
 }
