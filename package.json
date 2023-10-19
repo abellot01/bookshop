@@ -8,11 +8,13 @@
   "dependencies": {
     "@sap/cds": "^7",
     "@sap/cds-hana": "^2",
+    "@sap/hana-client": "^2.18.24",
     "@sap/xssec": "^3",
+    "async-waterfall": "^0.1.5",
+    "cds-swagger-ui-express": "^0.6.0",
     "cors": "^2.8.5",
     "express": "^4",
-    "passport": "^0",
-    "cds-swagger-ui-express": "^0.6.0"
+    "passport": "^0"
   },
   "scripts": {
     "start": "cds-serve",
