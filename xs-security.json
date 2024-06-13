@@ -24,11 +24,10 @@
       "x509"
     ],
     "redirect-uris": [
+      "http://localhost:5000/**",
       "https://*.applicationstudio.cloud.sap/**",
-      "https://*-space57f4bc1.cfapps.*.hana.ondemand.com/**",
-      "https://*-spac596b5097.cfapps.*.hana.ondemand.com/**",
-      "https://*sap-hana-cloud-hc-dev-demo-3-users-hana-dev-support-bookshop.cfapps.*.hana.ondemand.com/**",
-      "https://*-boo72f27d6d.cfapps.*.hana.ondemand.com/**"
+      "https://*.cfapps.*.hana.ondemand.com/**"
+      
     ]
   }
 }

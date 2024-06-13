@@ -23,7 +23,8 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: bookshop-db
-      - name: bookshop-uaa
+      - name: bookshop-auth
+      - name: bookshop-logging
 
   - name: bookshop-db-deployer
     type: hdb
@@ -47,7 +48,8 @@ modules:
           name: srv-api # must be used in xs-app.json as well
           url: ~{srv-url}
           forwardAuthToken: true
-      - name: bookshop-uaa
+      - name: bookshop-auth
+      - name: bookshop-logging
 
 resources:
   - name: bookshop-db
@@ -56,8 +58,8 @@ resources:
       service: hana
       service-plan: hdi-shared
       config:
-       database_id: bb4e2ab3-00a0-4b75-a8a6-1b2e904b1e08
-  - name: bookshop-uaa
+        database_id: bb4e2ab3-00a0-4b75-a8a6-1b2e904b1e08
+  - name: bookshop-auth
     type: org.cloudfoundry.managed-service
     parameters:
       service: xsuaa
@@ -66,3 +68,8 @@ resources:
       config:
         xsappname: bookshop-${org}-${space}
         tenant-mode: dedicated
+  - name: bookshop-logging
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: application-logs
+      service-plan: lite
